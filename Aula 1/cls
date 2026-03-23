@@ -1,0 +1,21 @@
+[1mdiff --git a/main.c b/main.c[m
+[1mindex 5933d1b..66f0f48 100644[m
+[1m--- a/main.c[m
+[1m+++ b/main.c[m
+[36m@@ -23,6 +23,8 @@[m [mint main (){[m
+  [m
+ // -m {on a message}[m
+ [m
+[32m+[m[32m// git status {ver o status do que foi adicionado}[m
+[32m+[m
+ // .gitignore {arquivo que tem a função de ignorar arquivos, como os .exe}[m
+         // *.exe        [m
+         // output/ [m
+[36m@@ -36,5 +38,5 @@[m [mint main (){[m
+ // git diff {ver o que mudaram}[m
+ [m
+ // git branch -M main[m
+[31m-[m
+[32m+[m[32m// adasdasd[m
+ // git remote add origin https://github.com/KK4K4/aula-git-c-2.git[m
+\ No newline at end of file[m
