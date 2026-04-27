@@ -42,7 +42,7 @@ int main (){
         if (presenca > 74){
             printf("Aluno Aprovado com %d %% \n", presenca); // mostra em porcentagem
         }else if (presenca <= 74){ 
-            printf("Aluno Reprovado %d %% \n", presenca);
+            printf("Aluno Reprovado, presenca: %d %% \n", presenca);
         }else{
             printf("Errou ai amigo!\n");
 
@@ -55,3 +55,5 @@ int main (){
 
 return 0;
 }
+
+// git push --allow-unreleated-histories
