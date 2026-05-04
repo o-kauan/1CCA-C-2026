@@ -31,7 +31,7 @@ int main (){
         printf("Digite sua nota %d:", i + 1);
         scanf("%f", &notas[i]);
         soma += notas[i]; // soma de tds as notas
-        printf("Soma das notas: %.1f\n", soma);
+    //    printf("Soma das notas: %.1f\n", soma);
     }
     
     printf("A media do aluno e: %.2f", soma / quantidade_notas);
