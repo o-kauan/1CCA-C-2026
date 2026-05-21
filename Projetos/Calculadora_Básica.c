@@ -1,6 +1,23 @@
 # include <stdio.h>
-int opcao, numero;
+int opcao, num;
 char resposta;
+
+// divir sucessivamente o num pela base e pegar os restos e colocar em um vetor
+// pegar a parte inteira da divisão e = num
+// acaba quando divir por 1 (então num > 0)
+
+void dec_to_n (int num, int base, int resultado []){
+    int i = 0;
+    while (num > 0) {
+        resultado [i] = num % base;
+        i ++;
+        num = num / base; 
+    }
+
+    for(int j = i - 1; j >= 0; j--) {
+        printf("%d", resultado[j]);
+    }
+}
 
 int main(){
     menu:
@@ -24,12 +41,18 @@ int main(){
         case 1:
         printf("\n--- BASE DECIMAL ---\n");
         printf("Digite o numero: ");
-        scanf("%d", &numero);
-
+        scanf("%d", &num);
+        printf("Decimal: %d\n", num);
         
+        int binario [] = {};
+        printf("Binario: ");
+        dec_to_n(num, 2, binario);
+        printf ("\n");
 
-
-
+        int hexadecimal [] = {};
+        printf("Hexadecimal: ");
+        dec_to_n(num, 16, hexadecimal);
+        printf ("\n");
         break;
         
         case 2:
