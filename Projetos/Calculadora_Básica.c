@@ -6,23 +6,57 @@ char resposta;
 // pegar a parte inteira da divisão e = num
 // acaba quando divir por 1 (então num > 0)
 
-void dec_to_n (int num, int base, int resultado []){
+void dec_to_n (int num, int base, int resultado [], int *tamanho){
     int i = 0;
     while (num > 0) {
         resultado [i] = num % base;
         i ++;
         num = num / base; 
     }
-
-    for(int j = i - 1; j >= 0; j--) {
-        printf("%d", resultado[j]);
-    }
+    *tamanho = i; // tamanho do vetor (casas "decimais")
 }
+
+
+void print_array (int *tam, int resultado []){
+    for (int j = *tam - 1; j >= 0; j--){
+        if (resultado [j] < 10)
+           printf("%d", resultado[j]);
+        else {
+        switch (resultado[j]){
+            case 10:
+                resultado [j] = 'A';
+            break;
+
+            case 11:
+                resultado [j] = 'B';
+            break;
+
+            case 12:
+                resultado [j] = 'C';
+            break;
+
+            case 13:
+                resultado [j] = 'D';
+            break;
+            
+            case 14:
+                resultado [j] = 'E';
+            break;
+
+            case 15:
+                resultado [j] = 'F';
+            break;
+        } 
+        printf("%c", resultado[j]);
+        }
+    }    
+}
+
 
 int main(){
     menu:
     printf("\n======================\n");
-    printf("CALCULADORA BASICA ;D\n");
+    printf("CALCULADORA BASECA ;D\n");
     printf("======================\n");
     printf("(1) Decimal\n");
     printf("(2) Binario\n");
@@ -44,14 +78,18 @@ int main(){
         scanf("%d", &num);
         printf("Decimal: %d\n", num);
         
-        int binario [] = {};
+        int bin [64] = {};
+        int bin_tam;
         printf("Binario: ");
-        dec_to_n(num, 2, binario);
+        dec_to_n(num, 2, bin, &bin_tam);
+        print_array(&bin_tam, tam);
         printf ("\n");
 
-        int hexadecimal [] = {};
+        int hex [64] = {};
+        int hex_tam;
         printf("Hexadecimal: ");
-        dec_to_n(num, 16, hexadecimal);
+        dec_to_n(num, 16, hex, &hex_tam);
+        print_array(&hex, hex);
         printf ("\n");
         break;
         
