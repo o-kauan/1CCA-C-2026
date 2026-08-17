@@ -2,7 +2,11 @@
 #include <string.h>
 #include <stdbool.h> // precisa pros booleanos
 
-typedef unsigned int uint;
+typedef unsigned int uint; 
+/* 
+    unsigned int uint = int só +
+    o typedef é só pra poder chamar como uint numero, ao invés de unsigned int numero.
+ */
 
 typedef struct{
     char rua[40];
