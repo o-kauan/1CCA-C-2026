@@ -9,7 +9,7 @@ typedef struct {
 
 void emprestarLivro(Livro *livro) {
     
-    strcpy(livro-> disponibilidade, "emprestado");
+    strcpy(livro -> disponibilidade, "emprestado");
 }
 
 int main() {
